@@ -1,0 +1,3 @@
+_admin:
+  resource: "admin"
+  type: rollerworks_autowiring

@@ -1,5 +1,6 @@
 {
-    "projects": {
-        "01CS5HZ5VBRQAE8Y7F8W28JDH7": "harmony/acme-theme"
-    }
+  "projects": {
+    "01CS5HZ5VBRQAE8Y7F8W28JDH7": "harmony/acme-theme",
+    "01CS5JQYCB631XWZJ8PTVNG8AR": "harmony/core-bundle"
+  }
 }

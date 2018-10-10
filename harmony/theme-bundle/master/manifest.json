@@ -1,0 +1,15 @@
+{
+  "bundles": {
+    "Harmony\\Bundle\\CoreBundle\\HarmonyThemeBundle": ["all"]
+  },
+  "copy-from-recipe": {
+    "themes/": "themes/"
+  },
+  "composer-scripts": {
+    "cache:clear": "symfony-cmd",
+    "theme:assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+  },
+  "gitignore": [
+    "/public/themes/"
+  ]
+}

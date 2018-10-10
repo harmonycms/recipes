@@ -1,6 +1,6 @@
 {
   "bundles": {
-    "Harmony\\Bundle\\CoreBundle\\HarmonyThemeBundle": ["all"]
+    "Harmony\\Bundle\\ThemeBundle\\HarmonyThemeBundle": ["all"]
   },
   "copy-from-recipe": {
     "themes/": "themes/"

@@ -1,5 +1,0 @@
-{
-  "bundles": {
-    "EasyCorp\\Bundle\\EasyAdminBundle\\EasyAdminBundle": ["all"]
-  }
-}

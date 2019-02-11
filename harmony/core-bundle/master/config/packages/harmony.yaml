@@ -1,8 +1,0 @@
-harmony:
-  theme: null
-
-  # Main settings are hardcoded here.
-  # Can be override using admin-bundle, data are saved in database.
-  settings:
-    site_name:
-      value: 'HarmonyDemo'

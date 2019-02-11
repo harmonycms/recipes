@@ -1,0 +1,4 @@
+_mainn:
+  resource: "main"
+  type: rollerworks_autowiring
+  prefix: /

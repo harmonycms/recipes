@@ -38,6 +38,19 @@ class Kernel extends BaseKernel
         }
     }
 
+    public function registerExtensions(): iterable
+    {
+        $filename = $this->getProjectDir() . '/config/extensions.php';
+        if (file_exists($filename)) {
+            $contents = require $filename;
+            foreach ($contents as $class => $envs) {
+                if ($envs[$this->environment] ?? $envs['all'] ?? false) {
+                    yield new $class();
+                }
+            }
+        }
+    }
+
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader)
     {
         $container->addResource(new FileResource($this->getProjectDir().'/config/bundles.php'));

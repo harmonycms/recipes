@@ -22,7 +22,6 @@
         "/.env.*.local",
         "/%PUBLIC_DIR%/bundles/",
         "/%VAR_DIR%/",
-        "/extensions/",
         "/vendor/"
     ]
 }

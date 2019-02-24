@@ -1,0 +1,12 @@
+{
+  "bundles": {
+    "Harmony\\Bundle\\ExtensionBundle\\HarmonyExtensionBundle": ["all"]
+  },
+  "composer-scripts": {
+    "cache:clear": "symfony-cmd"
+  },
+  "gitignore": [
+    "/extensions/",
+    "/public/extensions/"
+  ]
+}

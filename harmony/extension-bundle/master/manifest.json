@@ -3,7 +3,8 @@
     "Harmony\\Bundle\\ExtensionBundle\\HarmonyExtensionBundle": ["all"]
   },
   "composer-scripts": {
-    "cache:clear": "symfony-cmd"
+    "cache:clear": "symfony-cmd",
+    "extension:assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
   },
   "gitignore": [
     "/extensions/",

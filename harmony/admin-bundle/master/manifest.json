@@ -5,5 +5,8 @@
   "copy-from-recipe": {
     "config/": "%CONFIG_DIR%/"
   },
+  "composer-scripts": {
+    "fos:js-routing:dump --format=json --target=public/js/fos_js_routes.json": "symfony-cmd"
+  },
   "aliases": ["admin"]
 }

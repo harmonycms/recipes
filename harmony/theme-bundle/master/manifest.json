@@ -4,7 +4,7 @@
   },
   "composer-scripts": {
     "cache:clear": "symfony-cmd",
-    "theme:assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+    "theme:assets:install --symlink %PUBLIC_DIR%": "symfony-cmd"
   },
   "gitignore": [
     "/themes/",

@@ -1,5 +1,5 @@
 {
-  "bundles": {
+  "extensions": {
     "Harmony\\Extension\\MenuManager\\HarmonyMenuManagerModule": ["all"]
   },
   "composer-scripts": {

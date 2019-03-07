@@ -4,6 +4,7 @@
   },
   "composer-scripts": {
     "cache:clear": "symfony-cmd",
-    "fos:js-routing:dump --format=json --target=public/js/fos_js_routes.json": "symfony-cmd"
+    "fos:js-routing:dump --format=json --target=public/js/fos_js_routes.json": "symfony-cmd",
+    "doctrine:schema:update --forc": "symfony-cmd"
   }
 }

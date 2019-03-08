@@ -1,0 +1,8 @@
+# Menu configuration file
+# Default main menu used in every themes is `main_menu`
+# Menu management interface is provided by `harmony/menu-manager` module
+main_menu:
+  tree:
+    index:
+      label: 'Home'
+      route: 'index'

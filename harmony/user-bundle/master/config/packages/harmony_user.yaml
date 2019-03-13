@@ -1,0 +1,5 @@
+harmony_user:
+  user_class: App\Entity\User         # FQDN name of your user class
+  password_reset:
+    email_from: john.doe@gmail.com  # Sender of the password reset requests
+    token_ttl: 7200                 # TTL of a password reset request

@@ -3,8 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Harmony\UserBundle\Model\ExtendedUserTrait;
-use Harmony\UserBundle\Security\UserInterface;
+use Harmony\UserBundle\Model\User as BaseUser;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -14,34 +13,41 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @UniqueEntity(fields="email", message="Email already registered.")
  * @UniqueEntity(fields="username", message="Username already registered.")
  */
-class User implements UserInterface, \Serializable
+class User extends BaseUser
 {
-
-    use ExtendedUserTrait;
 
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    protected $id;
 
     /**
      * @ORM\Column(type="string")
      * @Assert\NotBlank()
      */
-    private $fullName;
+    protected $fullName;
 
+    /**
+     * @return int
+     */
     public function getId(): int
     {
         return $this->id;
     }
 
+    /**
+     * @param string $fullName
+     */
     public function setFullName(string $fullName): void
     {
         $this->fullName = $fullName;
     }
 
+    /**
+     * @return string|null
+     */
     public function getFullName(): ?string
     {
         return $this->fullName;

@@ -1,6 +1,6 @@
 {
   "bundles": {
-    "Harmony\\UserBundle\\HarmonyUserBundle": ["all"]
+    "Harmony\\Bundle\\UserBundle\\HarmonyUserBundle": ["all"]
   },
   "copy-from-recipe": {
     "config/": "%CONFIG_DIR%/",

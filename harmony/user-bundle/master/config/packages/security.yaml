@@ -9,13 +9,13 @@ security:
 
     providers:
         user_provider:
-            id: Harmony\UserBundle\Security\UserProvider
+            id: Harmony\Bundle\UserBundle\Security\UserProvider
 
     firewalls:
         main:
             pattern:  ^/
             provider: user_provider
-            user_checker: Harmony\UserBundle\Security\UserChecker
+            user_checker: Harmony\Bundle\UserBundle\Security\UserChecker
             anonymous:    true
 
             form_login:

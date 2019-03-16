@@ -23,7 +23,7 @@ class Setting extends SettingModel
 
     /**
      * @var ArrayCollection|SettingTag[]
-     * @ORM\ManyToMany(targetEntity="Harmony\Bundle\CoreBundle\Entity\SettingTag", cascade={"persist"}, fetch="EAGER")
+     * @ORM\ManyToMany(targetEntity="App\Entity\SettingTag", cascade={"persist"}, fetch="EAGER")
      */
     protected $tags;
 

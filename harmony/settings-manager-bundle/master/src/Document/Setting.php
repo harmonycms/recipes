@@ -17,7 +17,7 @@ class Setting extends SettingModel
     protected $id;
 
     /**
-     * @MongoDB\ReferenceMany(targetDocument="App\Entity\SettingTag", cascade={"persist"})
+     * @MongoDB\ReferenceMany(targetDocument="App\Document\SettingTag", cascade={"persist"})
      */
     protected $tags;
 

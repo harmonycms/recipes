@@ -3,12 +3,12 @@
 namespace App\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
-use Harmony\Bundle\SettingsManagerBundle\Model\DomainModel;
+use Harmony\Bundle\SettingsManagerBundle\Model\SettingDomain as BaseSettingDomain;
 
 /**
  * @MongoDB\Document
  */
-class SettingDomain extends DomainModel
+class SettingDomain extends BaseSettingDomain
 {
 
     /**

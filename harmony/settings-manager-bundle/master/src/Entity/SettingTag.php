@@ -3,13 +3,13 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Harmony\Bundle\SettingsManagerBundle\Model\TagModel;
+use Harmony\Bundle\SettingsManagerBundle\Model\SettingTag as BaseSettingTag;
 
 /**
  * @ORM\Entity()
  * @ORM\Table(name="setting_tag")
  */
-class SettingTag extends TagModel
+class SettingTag extends BaseSettingTag
 {
 
     /**

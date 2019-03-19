@@ -23,9 +23,9 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @return int
+     * @return int|string
      */
-    public function getId(): int
+    public function getId()
     {
         return $this->id;
     }

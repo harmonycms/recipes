@@ -19,9 +19,9 @@ class User extends BaseUser
     /**
      * Get the value of id.
      *
-     * @return int
+     * @return int|string
      */
-    public function getId(): int
+    public function getId()
     {
         return $this->id;
     }

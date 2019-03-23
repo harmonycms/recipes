@@ -2,14 +2,23 @@
   "bundles": {
     "Harmony\\Bundle\\UserBundle\\HarmonyUserBundle": ["all"]
   },
+  "copy-from-recipe": {
+    "config/routes/": "%CONFIG_DIR%/routes/"
+  },
   "copy-from-recipe-if": {
     "emulienfou/orm-pack": {
-      "config/packages/doctrine.yaml": "%CONFIG_DIR%/packages/doctrine.yaml",
       "src/Entity/": "%SRC_DIR%/Entity/"
     },
     "emulienfou/mongodb-pack": {
-      "config/packages/doctrine_mongodb.yaml": "%CONFIG_DIR%/packages/doctrine_mongodb.yaml",
       "src/Document/": "%SRC_DIR%/Document/"
+    }
+  },
+  "merge-from-recipe-if": {
+    "emulienfou/orm-pack": {
+      "config/packages/doctrine.yaml": "%CONFIG_DIR%/packages/doctrine.yaml"
+    },
+    "emulienfou/mongodb-pack": {
+      "config/packages/doctrine_mongodb.yaml": "%CONFIG_DIR%/packages/doctrine_mongodb.yaml"
     }
   }
 }

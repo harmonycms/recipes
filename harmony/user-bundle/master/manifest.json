@@ -12,15 +12,5 @@
     "emulienfou/mongodb-pack": {
       "src/Document/": "%SRC_DIR%/Document/"
     }
-  },
-  "merge-from-recipe-if": {
-    "emulienfou/orm-pack": {
-      "config/packages/doctrine.yaml": "%CONFIG_DIR%/packages/doctrine.yaml",
-      "config/packages/security.yaml": "%CONFIG_DIR%/packages/security.yaml"
-    },
-    "emulienfou/mongodb-pack": {
-      "config/packages/doctrine_mongodb.yaml": "%CONFIG_DIR%/packages/doctrine_mongodb.yaml",
-      "config/packages/security_mongodb.yaml": "%CONFIG_DIR%/packages/security.yaml"
-    }
   }
 }

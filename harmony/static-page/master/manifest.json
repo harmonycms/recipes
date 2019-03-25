@@ -1,0 +1,13 @@
+{
+  "extensions": {
+    "Harmony\\Extension\\StaticPage\\HarmonyStaticPagePlugin": ["all"]
+  },
+  "copy-from-recipe-if": {
+    "emulienfou/orm-pack": {
+      "src/Entity/": "%SRC_DIR%/Entity/"
+    },
+    "emulienfou/mongodb-pack": {
+      "src/Document/": "%SRC_DIR%/Document/"
+    }
+  }
+}

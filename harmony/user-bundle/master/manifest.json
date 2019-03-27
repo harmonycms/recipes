@@ -2,6 +2,9 @@
   "bundles": {
     "Harmony\\Bundle\\UserBundle\\HarmonyUserBundle": ["all"]
   },
+  "copy-from-recipe": {
+    "config/routes/harmony_user.yaml": "%CONFIG_DIR%/routes/harmony_user.yaml"
+  },
   "copy-from-recipe-if": {
     "emulienfou/orm-pack": {
       "config/packages/harmony_user.doctrine.yaml": "%CONFIG_DIR%/packages/harmony_user.yaml",

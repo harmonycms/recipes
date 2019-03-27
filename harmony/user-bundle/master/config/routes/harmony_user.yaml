@@ -1,3 +1,0 @@
-harmony_user:
-  resource: "@HarmonyUserBundle/Controller/"
-  type: annotation

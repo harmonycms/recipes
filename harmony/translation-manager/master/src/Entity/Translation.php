@@ -2,11 +2,14 @@
 
 namespace App\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
 use Harmony\Extension\TranslationManager\Manager\TranslationInterface;
 use Harmony\Extension\TranslationManager\Model\Translation as TranslationModel;
+use Harmony\Extension\TranslationManager\Model\TransUnit;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
+ * @ORM\Entity()
  * @UniqueEntity(fields={"transUnit", "locale"})
  * @author Cédric Girard <c.girard@lexik.fr>
  */
@@ -19,7 +22,7 @@ class Translation extends TranslationModel implements TranslationInterface
     protected $id;
 
     /**
-     * @var Harmony\Extension\TranslationManager\Entity\TransUnit
+     * @var TransUnit
      */
     protected $transUnit;
 
@@ -36,9 +39,9 @@ class Translation extends TranslationModel implements TranslationInterface
     /**
      * Set transUnit
      *
-     * @param Harmony\Extension\TranslationManager\Entity\TransUnit $transUnit
+     * @param TransUnit $transUnit
      */
-    public function setTransUnit(\Harmony\Extension\TranslationManager\Model\TransUnit $transUnit)
+    public function setTransUnit(TransUnit $transUnit)
     {
         $this->transUnit = $transUnit;
     }
@@ -46,7 +49,7 @@ class Translation extends TranslationModel implements TranslationInterface
     /**
      * Get transUnit
      *
-     * @return Harmony\Extension\TranslationManager\Entity\TransUnit
+     * @return TransUnit
      */
     public function getTransUnit()
     {

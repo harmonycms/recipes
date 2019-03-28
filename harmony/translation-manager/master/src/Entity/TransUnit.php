@@ -2,11 +2,14 @@
 
 namespace App\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
 use Harmony\Extension\TranslationManager\Manager\TransUnitInterface;
+use Harmony\Extension\TranslationManager\Model\Translation;
 use Harmony\Extension\TranslationManager\Model\TransUnit as TransUnitModel;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
+ * @ORM\Entity()
  * @UniqueEntity(fields={"key", "domain"})
  * @author Cédric Girard <c.girard@lexik.fr>
  */
@@ -14,11 +17,29 @@ class TransUnit extends TransUnitModel implements TransUnitInterface
 {
 
     /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     * @var int
+     */
+    protected $id;
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
      * Add translations
      *
-     * @param Harmony\Extension\TranslationManager\Entity\Translation $translations
+     * @param Translation $translation
      */
-    public function addTranslation(\Harmony\Extension\TranslationManager\Model\Translation $translation)
+    public function addTranslation(Translation $translation)
     {
         $translation->setTransUnit($this);
 

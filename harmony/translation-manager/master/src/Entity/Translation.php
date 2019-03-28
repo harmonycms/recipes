@@ -17,6 +17,9 @@ class Translation extends TranslationModel implements TranslationInterface
 {
 
     /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
      * @var int
      */
     protected $id;

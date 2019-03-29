@@ -35,9 +35,15 @@ class TranslationManagerTranslation extends TranslationModel implements Translat
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\TranslationManagerTransUnit", inversedBy="translations")
      * @ORM\JoinColumn(name="trans_unit_id", referencedColumnName="id")
-     * @var TransUnit $transUnit
+     * @var TranslationManagerTransUnit $transUnit
      */
     protected $transUnit;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\TranslationManagerFile", inversedBy="translations")
+     * @var TranslationManagerFile $file
+     */
+    protected $file;
 
     /**
      * @ORM\Column(name="modified_manually", type="boolean")

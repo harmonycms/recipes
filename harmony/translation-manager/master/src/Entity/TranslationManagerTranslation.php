@@ -64,21 +64,49 @@ class TranslationManagerTranslation extends TranslationModel implements Translat
     /**
      * Set transUnit
      *
-     * @param TransUnit $transUnit
+     * @param TranslationManagerTransUnit $transUnit
+     *
+     * @return TranslationManagerTranslation
      */
-    public function setTransUnit(TransUnit $transUnit)
+    public function setTransUnit(TranslationManagerTransUnit $transUnit): TranslationManagerTranslation
     {
         $this->transUnit = $transUnit;
+
+        return $this;
     }
 
     /**
      * Get transUnit
      *
-     * @return TransUnit
+     * @return null|TranslationManagerTransUnit
      */
-    public function getTransUnit()
+    public function getTransUnit(): ?TranslationManagerTransUnit
     {
         return $this->transUnit;
+    }
+
+    /**
+     * Set file
+     *
+     * @param TranslationManagerFile $file
+     *
+     * @return TranslationManagerTranslation
+     */
+    public function setFile(TranslationManagerFile $file): TranslationManagerTranslation
+    {
+        $this->file = $file;
+
+        return $this;
+    }
+
+    /**
+     * Get file
+     *
+     * @return null|TranslationManagerFile
+     */
+    public function getFile(): ?TranslationManagerFile
+    {
+        return $this->file;
     }
 
     /**

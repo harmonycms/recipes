@@ -10,7 +10,7 @@ use Harmony\Extension\TranslationManager\Model\TransUnit;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
- * @ORM\Entity(repositoryClass="Harmony\Extension\TranslationManager\Entity\TranslationRepository")
+ * @ORM\Entity(repositoryClass="Harmony\Extension\TranslationManager\EntityRepository\TranslationRepository")
  * @ORM\Table(
  *     name="translation_manager_translations",
  *     uniqueConstraints={
@@ -21,7 +21,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @UniqueEntity(fields={"transUnit", "locale"})
  * @author Cédric Girard <c.girard@lexik.fr>
  */
-class Translation extends TranslationModel implements TranslationInterface
+class TranslationManagerTranslation extends TranslationModel implements TranslationInterface
 {
 
     /**
@@ -33,7 +33,7 @@ class Translation extends TranslationModel implements TranslationInterface
     protected $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\TransUnit", inversedBy="translations")
+     * @ORM\ManyToOne(targetEntity="App\Entity\TranslationManagerTransUnit", inversedBy="translations")
      * @ORM\JoinColumn(name="trans_unit_id", referencedColumnName="id")
      * @var TransUnit $transUnit
      */

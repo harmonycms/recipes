@@ -5,36 +5,35 @@ namespace App\Entity;
 use DateTime;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Harmony\Extension\TranslationManager\Manager\TransUnitInterface;
-use Harmony\Extension\TranslationManager\Model\Translation;
-use Harmony\Extension\TranslationManager\Model\TransUnit as TransUnitModel;
+use Harmony\Extension\TranslationManager\Manager\FileInterface;
+use Harmony\Extension\TranslationManager\Model\File as FileModel;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
- * @ORM\Entity(repositoryClass="Harmony\Extension\TranslationManager\Entity\TransUnitRepository")
+ * @ORM\Entity(repositoryClass="Harmony\Extension\TranslationManager\EntityRepository\FileRepository")
  * @ORM\Table(
- *     name="translation_manager_trans_unit",
+ *     name="translation_manager_file",
  *     uniqueConstraints={
- *          @ORM\UniqueConstraint(name="key_domain_idx", columns={"key_name", "domain"})
+ *          @ORM\UniqueConstraint(name="hash_idx", columns={"hash"})
  *     }
  * )
+ * @UniqueEntity(fields={"hash"})
  * @ORM\HasLifecycleCallbacks()
- * @UniqueEntity(fields={"key", "domain"})
  * @author Cédric Girard <c.girard@lexik.fr>
  */
-class TransUnit extends TransUnitModel implements TransUnitInterface
+class TranslationManagerFile extends FileModel implements FileInterface
 {
 
     /**
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      * @ORM\Column(type="integer")
-     * @var int $id
+     * @var int
      */
     protected $id;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Translation", mappedBy="transUnit", cascade={"all"})
+     * @ORM\OneToMany(targetEntity="App\Entity\TranslationManagerTranslation", mappedBy="file", cascade={"persist"})
      * @var Collection $translations
      */
     protected $translations;
@@ -42,23 +41,11 @@ class TransUnit extends TransUnitModel implements TransUnitInterface
     /**
      * Get id
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Add translations
-     *
-     * @param Translation $translation
-     */
-    public function addTranslation(Translation $translation)
-    {
-        $translation->setTransUnit($this);
-
-        $this->translations[] = $translation;
     }
 
     /**

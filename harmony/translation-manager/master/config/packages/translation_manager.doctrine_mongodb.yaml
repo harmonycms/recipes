@@ -1,0 +1,2 @@
+doctrine_mongodb:
+    resolve_target_documents:

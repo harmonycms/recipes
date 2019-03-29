@@ -4,9 +4,11 @@
   },
   "copy-from-recipe-if": {
     "emulienfou/orm-pack": {
+      "config/packages/translation_manager.doctrine.yaml": "%CONFIG_DIR%/packages/harmony_translation_manager.yaml",
       "src/Entity/": "%SRC_DIR%/Entity/"
     },
     "emulienfou/mongodb-pack": {
+      "config/packages/translation_manager.doctrine_mongodb.yaml": "%CONFIG_DIR%/packages/harmony_translation_manager.yaml",
       "src/Document/": "%SRC_DIR%/Document/"
     }
   }

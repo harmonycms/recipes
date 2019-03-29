@@ -1,0 +1,6 @@
+doctrine:
+    orm:
+        resolve_target_entities:
+            Harmony\Extension\TranslationManager\Model\File: App\Entity\TranslationManagerFile
+            Harmony\Extension\TranslationManager\Model\Translation: App\Entity\TranslationManagerTranslation
+            Harmony\Extension\TranslationManager\Model\TransUnit: App\Entity\TranslationManagerTransUnit

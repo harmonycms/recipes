@@ -1,0 +1,11 @@
+doctrine:
+    orm:
+        resolve_target_entities:
+            Harmony\Bundle\RoutingBundle\Model\Route: App\Entity\Route
+            Harmony\Bundle\RoutingBundle\Model\RedirectRoute: App\Entity\RedirectRoute
+
+harmony_routing:
+    dynamic:
+        persistence:
+            orm:
+                enabled: true

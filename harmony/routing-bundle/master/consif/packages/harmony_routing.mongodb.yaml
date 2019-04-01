@@ -1,0 +1,10 @@
+doctrine_mongodb:
+    resolve_target_documents:
+        Harmony\Bundle\RoutingBundle\Model\Route: App\Document\Route
+        Harmony\Bundle\RoutingBundle\Model\RedirectRoute: App\Document\RedirectRoute
+
+harmony_routing:
+    dynamic:
+        persistence:
+            mongodb:
+                enabled: true

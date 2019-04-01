@@ -1,0 +1,10 @@
+{
+    "bundles": {
+        "Harmony\\Bundle\\RoutingBundle\\HarmonyRoutingBundle": ["all"]
+    },
+    "copy-from-recipe-if": {
+        "emulienfou/orm-pack": {
+            "src/Entity/": "%SRC_DIR%/Entity/"
+        }
+    }
+}

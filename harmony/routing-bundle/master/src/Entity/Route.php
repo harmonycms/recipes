@@ -26,7 +26,7 @@ class Route extends RouteModel
     protected $id;
 
     /**
-     * @ORM\Column(unique="true")
+     * @ORM\Column(unique=true)
      * @var string $name
      */
     protected $name;

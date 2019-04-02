@@ -1,8 +1,13 @@
 {
-  "bundles": {
-    "Harmony\\Bundle\\SettingsManagerBundle\\HarmonySettingsManagerBundle": ["all"]
-  },
-  "copy-from-recipe": {
-    "src/": "%SRC_DIR%/"
-  }
+    "bundles": {
+        "Harmony\\Bundle\\SettingsManagerBundle\\HarmonySettingsManagerBundle": ["all"]
+    },
+    "copy-from-recipe-if": {
+        "emulienfou/orm-pack": {
+            "src/Entity/": "%SRC_DIR%/Entity/"
+        },
+        "emulienfou/mongodb-pack": {
+            "src/Document/": "%SRC_DIR%/Document/"
+        }
+    }
 }

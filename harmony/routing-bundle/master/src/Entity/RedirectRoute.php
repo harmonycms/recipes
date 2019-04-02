@@ -25,7 +25,7 @@ class RedirectRoute extends RedirectRouteModel
     /**
      * Get Id
      *
-     * @return mixed
+     * @return null|string|int
      */
     public function getId()
     {

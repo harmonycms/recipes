@@ -54,7 +54,7 @@ class Route extends RouteModel
      *
      * @return Route
      */
-    public function setName($name): Route
+    public function setName(string $name): Route
     {
         $this->name = $name;
 
@@ -64,9 +64,9 @@ class Route extends RouteModel
     /**
      * Gets the name.
      *
-     * @return string
+     * @return null|string
      */
-    public function getName()
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -78,7 +78,7 @@ class Route extends RouteModel
      *
      * @return Route
      */
-    public function setPosition($position): Route
+    public function setPosition(int $position): Route
     {
         $this->position = $position;
 
@@ -88,10 +88,18 @@ class Route extends RouteModel
     /**
      * Get the sort order of this route.
      *
-     * @return int
+     * @return null|int
      */
-    public function getPosition()
+    public function getPosition(): ?int
     {
         return $this->position;
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString(): string
+    {
+        return $this->getName();
     }
 }

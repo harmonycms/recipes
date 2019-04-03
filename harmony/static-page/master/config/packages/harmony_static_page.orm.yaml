@@ -1,0 +1,4 @@
+doctrine:
+    orm:
+        resolve_target_entities:
+            Harmony\Extension\StaticPage\Model\StaticPageInterface: App\Entity\StaticPage

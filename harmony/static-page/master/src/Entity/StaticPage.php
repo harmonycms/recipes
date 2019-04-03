@@ -2,8 +2,11 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Exception;
 use Harmony\Extension\StaticPage\Model\StaticPage as BaseStaticPage;
+use Symfony\Cmf\Component\Routing\RouteObjectInterface;
 
 /**
  * Class StaticPage
@@ -20,6 +23,23 @@ class StaticPage extends BaseStaticPage
      * @ORM\Column(type="integer")
      */
     protected $id;
+
+    /**
+     * @var RouteObjectInterface[]|ArrayCollection
+     * @ORM\ManyToMany(targetEntity="Harmony\Bundle\RoutingBundle\Model\Route", cascade={"persist", "remove"})
+     */
+    protected $routes;
+
+    /**
+     * StaticPage constructor.
+     *
+     * @throws Exception
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->routes = new ArrayCollection();
+    }
 
     /**
      * @return int|string

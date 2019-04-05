@@ -4,6 +4,10 @@ doctrine_mongodb:
         Harmony\Bundle\RoutingBundle\Model\RedirectRoute: App\Document\RedirectRoute
 
 harmony_routing:
+    chain:
+        routers_by_id:
+            harmony_routing.dynamic_router: 20
+            router.default: 100
     dynamic:
         persistence:
             mongodb:

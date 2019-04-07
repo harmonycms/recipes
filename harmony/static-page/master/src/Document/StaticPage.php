@@ -5,6 +5,7 @@ namespace App\Document;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 use Exception;
+use Gedmo\Mapping\Annotation as Gedmo;
 use Harmony\Extension\StaticPage\Model\StaticPage as BaseStaticPage;
 use Symfony\Cmf\Component\Routing\RouteObjectInterface;
 
@@ -27,6 +28,12 @@ class StaticPage extends BaseStaticPage
      * @MongoDB\ReferenceMany(targetDocument="Harmony\Bundle\RoutingBundle\Model\Route", cascade={"persist", "remove"})
      */
     protected $routes;
+
+    /**
+     * @Gedmo\Slug(fields={"title"})
+     * @var string $slug
+     */
+    protected $slug;
 
     /**
      * StaticPage constructor.

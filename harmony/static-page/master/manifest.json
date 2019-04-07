@@ -1,14 +1,15 @@
 {
-  "extensions": {
-    "Harmony\\Extension\\StaticPage\\HarmonyStaticPagePlugin": ["all"]
-  },
-  "copy-from-recipe-if": {
-    "emulienfou/orm-pack": {
-        "config/packages/harmony_static_page.orm.yaml": "%CONFIG_DIR%/packages/harmony_static_page.yaml",
-      "src/Entity/": "%SRC_DIR%/Entity/"
+    "extensions": {
+        "Harmony\\Extension\\StaticPage\\HarmonyStaticPagePlugin": ["all"]
     },
-    "emulienfou/mongodb-pack": {
-      "src/Document/": "%SRC_DIR%/Document/"
+    "copy-from-recipe-if": {
+        "emulienfou/orm-pack": {
+            "config/packages/harmony_static_page.orm.yaml": "%CONFIG_DIR%/packages/harmony_static_page.yaml",
+            "src/Entity/": "%SRC_DIR%/Entity/"
+        },
+        "emulienfou/mongodb-pack": {
+            "config/packages/harmony_static_page.mongodb.yaml": "%CONFIG_DIR%/packages/harmony_static_page.yaml",
+            "src/Document/": "%SRC_DIR%/Document/"
+        }
     }
-  }
 }

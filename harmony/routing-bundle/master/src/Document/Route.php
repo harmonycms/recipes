@@ -23,8 +23,8 @@ class Route extends RouteModel
     protected $id;
 
     /**
-     * @MongoDB\Field(unique=true)
-     * @MongoDB\Index(name="name_idx")
+     * @MongoDB\Field()
+     * @MongoDB\Index(name="name_idx", unique=true)
      * @var string $name
      */
     protected $name;

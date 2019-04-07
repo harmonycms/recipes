@@ -6,7 +6,7 @@ doctrine_mongodb:
 harmony_routing:
     chain:
         routers_by_id:
-            harmony_routing.dynamic_router: 20
+            Harmony\Bundle\RoutingBundle\Routing\DynamicRouter: 20
             router.default: 100
     dynamic:
         persistence:

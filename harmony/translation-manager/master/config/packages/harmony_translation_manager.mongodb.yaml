@@ -1,0 +1,9 @@
+harmony_translation_manager:
+    fallback_locale: [en]         # (required) default locale(s) to use
+    managed_locales: [en, fr, de] # (required) locales that the bundle has to manage
+
+doctrine_mongodb:
+    resolve_target_documents:
+        Harmony\Extension\TranslationManager\Model\File: App\Document\TranslationManagerFile
+        Harmony\Extension\TranslationManager\Model\Translation: App\Document\TranslationManagerTranslation
+        Harmony\Extension\TranslationManager\Model\TransUnit: App\Document\TranslationManagerTransUnit

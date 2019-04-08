@@ -23,13 +23,13 @@ class TranslationManagerTranslation extends TranslationModel implements Translat
     protected $id;
 
     /**
-     * @MongoDB\ReferenceOne(targetDocument="App\Entity\TranslationManagerTransUnit", inversedBy="translations")
+     * @MongoDB\ReferenceOne(targetDocument="App\Document\TranslationManagerTransUnit", inversedBy="translations")
      * @var TranslationManagerTransUnit $transUnit
      */
     protected $transUnit;
 
     /**
-     * @MongoDB\ReferenceOne(targetDocument="App\Entity\TranslationManagerFile", inversedBy="translations")
+     * @MongoDB\ReferenceOne(targetDocument="App\Document\TranslationManagerFile", inversedBy="translations")
      * @var TranslationManagerFile $file
      */
     protected $file;

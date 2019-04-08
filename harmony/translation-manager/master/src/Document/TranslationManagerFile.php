@@ -21,7 +21,7 @@ class TranslationManagerFile extends FileModel implements FileInterface
 
     /**
      * @MongoDB\ReferenceMany(
-     *     targetDocument="App\Entity\TranslationManagerTranslation",
+     *     targetDocument="App\Document\TranslationManagerTranslation",
      *     mappedBy="file",
      *     cascade={"persist"}
      * )

@@ -25,7 +25,7 @@ class TranslationManagerTransUnit extends TransUnitModel implements TransUnitInt
 
     /**
      * @MongoDB\ReferenceMany(
-     *     targetDocument="App\Entity\TranslationManagerTranslation",
+     *     targetDocument="App\Document\TranslationManagerTranslation",
      *     mappedBy="transUnit",
      *     cascade={"all"}
      * )

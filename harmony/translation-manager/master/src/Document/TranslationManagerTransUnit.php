@@ -3,8 +3,10 @@
 namespace App\Document;
 
 use DateTime;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 use Harmony\Extension\TranslationManager\Manager\TransUnitInterface;
+use Harmony\Extension\TranslationManager\Model\Translation;
 use Harmony\Extension\TranslationManager\Model\TransUnit as TransUnitModel;
 use MongoTimestamp;
 

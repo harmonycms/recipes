@@ -108,6 +108,7 @@ class TranslationManagerTranslation extends TranslationModel implements Translat
     }
 
     /**
+     * @MongoDB\PrePersist()
      * {@inheritdoc}
      */
     public function prePersist()
@@ -119,6 +120,7 @@ class TranslationManagerTranslation extends TranslationModel implements Translat
     }
 
     /**
+     * @MongoDB\PreUpdate()
      * {@inheritdoc}
      */
     public function preUpdate()

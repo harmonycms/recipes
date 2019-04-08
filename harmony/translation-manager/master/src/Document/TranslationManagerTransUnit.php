@@ -12,6 +12,7 @@ use MongoTimestamp;
 
 /**
  * @MongoDB\Document(repositoryClass="Harmony\Extension\TranslationManager\DocumentRepository\TransUnitRepository")
+ * @MongoDB\HasLifecycleCallbacks()
  * @author Cédric Girard <c.girard@lexik.fr>
  */
 class TranslationManagerTransUnit extends TransUnitModel implements TransUnitInterface
@@ -24,11 +25,7 @@ class TranslationManagerTransUnit extends TransUnitModel implements TransUnitInt
     protected $id;
 
     /**
-     * @MongoDB\ReferenceMany(
-     *     targetDocument="App\Document\TranslationManagerTranslation",
-     *     mappedBy="transUnit",
-     *     cascade={"all"}
-     * )
+     * @MongoDB\EmbedMany(targetDocument="App\Document\TranslationManagerTranslation", strategy="set")
      * @var Collection $translations
      */
     protected $translations;
@@ -69,6 +66,7 @@ class TranslationManagerTransUnit extends TransUnitModel implements TransUnitInt
     }
 
     /**
+     * @MongoDB\PrePersist()
      * {@inheritdoc}
      */
     public function prePersist()
@@ -80,6 +78,7 @@ class TranslationManagerTransUnit extends TransUnitModel implements TransUnitInt
     }
 
     /**
+     * @MongoDB\PreUpdate()
      * {@inheritdoc}
      */
     public function preUpdate()

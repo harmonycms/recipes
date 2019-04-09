@@ -4,6 +4,6 @@ harmony_translation_manager:
 
 doctrine_mongodb:
     resolve_target_documents:
-        Harmony\Extension\TranslationManager\Model\File: App\Document\TranslationManagerFile
-        Harmony\Extension\TranslationManager\Model\Translation: App\Document\TranslationManagerTranslation
-        Harmony\Extension\TranslationManager\Model\TransUnit: App\Document\TranslationManagerTransUnit
+        Harmony\Extension\TranslationManager\Manager\FileInterface: App\Document\TranslationManagerFile
+        Harmony\Extension\TranslationManager\Manager\TranslationInterface: App\Document\TranslationManagerTranslation
+        Harmony\Extension\TranslationManager\Manager\TransUnitInterface: App\Document\TranslationManagerTransUnit

@@ -5,6 +5,6 @@ harmony_translation_manager:
 doctrine:
     orm:
         resolve_target_entities:
-            Harmony\Extension\TranslationManager\Model\File: App\Entity\TranslationManagerFile
-            Harmony\Extension\TranslationManager\Model\Translation: App\Entity\TranslationManagerTranslation
-            Harmony\Extension\TranslationManager\Model\TransUnit: App\Entity\TranslationManagerTransUnit
+            Harmony\Extension\TranslationManager\Manager\FileInterface: App\Entity\TranslationManagerFile
+            Harmony\Extension\TranslationManager\Manager\TranslationInterface: App\Entity\TranslationManagerTranslation
+            Harmony\Extension\TranslationManager\Manager\TransUnitInterface: App\Entity\TranslationManagerTransUnit

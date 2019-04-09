@@ -11,5 +11,9 @@
             "config/packages/harmony_translation_manager.mongodb.yaml": "%CONFIG_DIR%/packages/harmony_translation_manager.yaml",
             "src/Document/": "%SRC_DIR%/Document/"
         }
+    },
+    "composer-scripts": {
+        "cache:clear": "symfony-cmd",
+        "extension:assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
     }
 }

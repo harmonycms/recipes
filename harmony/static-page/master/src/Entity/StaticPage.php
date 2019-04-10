@@ -26,7 +26,7 @@ class StaticPage extends BaseStaticPage
 
     /**
      * @var RouteObjectInterface[]|ArrayCollection
-     * @ORM\ManyToMany(targetEntity="Harmony\Bundle\RoutingBundle\Model\Route", cascade={"persist", "remove"})
+     * @ORM\ManyToMany(targetEntity="Symfony\Cmf\Component\Routing\RouteObjectInterface", cascade={"persist", "remove"})
      */
     protected $routes;
 

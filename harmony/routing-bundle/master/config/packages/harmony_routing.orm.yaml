@@ -5,11 +5,5 @@ doctrine:
             Symfony\Cmf\Component\Routing\RouteObjectInterface: App\Entity\Route
 
 harmony_routing:
-    chain:
-        routers_by_id:
-            Harmony\Bundle\RoutingBundle\Routing\DynamicRouter: 20
-            router.default: 100
     dynamic:
-        persistence:
-            orm:
-                enabled: true
+        enabled: true

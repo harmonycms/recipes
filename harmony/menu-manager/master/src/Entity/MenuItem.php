@@ -24,6 +24,19 @@ class MenuItem extends BaseMenuItem
     protected $id;
 
     /**
+     * Child items
+     * @ORM\OneToMany(targetEntity="MenuItem", mappedBy="parent", cascade={"all"}, indexBy="name")
+     */
+    protected $children;
+
+    /**
+     * Parent item
+     * @ORM\ManyToOne(targetEntity="MenuItem", inversedBy="children")
+     * @ORM\JoinColumn(name="parent_id", referencedColumnName="id", onDelete="SET NULL")
+     */
+    protected $parent = null;
+
+    /**
      * Getter for 'id'.
      *
      * @return int

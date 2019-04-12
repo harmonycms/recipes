@@ -1,0 +1,3 @@
+doctrine_mongodb:
+    resolve_target_documents:
+        Harmony\Extension\MenuManager\Model\MenuItem: App\Document\MenuItem

@@ -1,0 +1,4 @@
+doctrine:
+    orm:
+        resolve_target_entities:
+            Harmony\Extension\MenuManager\Model\MenuItem: App\Entity\MenuItem

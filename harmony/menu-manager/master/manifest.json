@@ -4,9 +4,11 @@
     },
     "copy-from-recipe-if": {
         "emulienfou/orm-pack": {
+            "config/packages/harmony_menu_manager.orm.yaml": "%CONFIG_DIR%/packages/harmony_menu_manager.yaml",
             "src/Entity/": "%SRC_DIR%/Entity/"
         },
         "emulienfou/mongodb-pack": {
+            "config/packages/harmony_menu_manager.mongodb.yaml": "%CONFIG_DIR%/packages/harmony_menu_manager.yaml",
             "src/Document/": "%SRC_DIR%/Document/"
         }
     },

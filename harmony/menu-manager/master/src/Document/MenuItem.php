@@ -29,12 +29,7 @@ class MenuItem extends BaseMenuItem
 
     /**
      * Child items
-     * @MongoDB\ReferenceMany(
-     *     targetDocument="App\Document\MenuItem",
-     *     mappedBy="parent",
-     *     cascade={"all"},
-     *     indexBy="name"
-     * )
+     * @MongoDB\ReferenceMany(targetDocument="App\Document\MenuItem", mappedBy="parent", cascade={"all"})
      */
     protected $children;
 

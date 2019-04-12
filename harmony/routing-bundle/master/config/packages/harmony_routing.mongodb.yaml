@@ -1,14 +1,8 @@
 doctrine_mongodb:
     resolve_target_documents:
-        Harmony\Bundle\RoutingBundle\Model\Route: App\Document\Route
-        Harmony\Bundle\RoutingBundle\Model\RedirectRoute: App\Document\RedirectRoute
+        Symfony\Cmf\Component\Routing\RedirectRouteInterface: App\Document\RedirectRoute
+        Symfony\Cmf\Component\Routing\RouteObjectInterface: App\Document\Route
 
 harmony_routing:
-    chain:
-        routers_by_id:
-            Harmony\Bundle\RoutingBundle\Routing\DynamicRouter: 20
-            router.default: 100
     dynamic:
-        persistence:
-            mongodb:
-                enabled: true
+        enabled: true

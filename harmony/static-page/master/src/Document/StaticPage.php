@@ -25,7 +25,7 @@ class StaticPage extends BaseStaticPage
 
     /**
      * @var RouteObjectInterface[]|ArrayCollection
-     * @MongoDB\ReferenceMany(targetDocument="Harmony\Bundle\RoutingBundle\Model\Route", cascade={"persist", "remove"})
+     * @MongoDB\ReferenceMany(targetDocument="Symfony\Cmf\Component\Routing\RouteObjectInterface", cascade={"persist", "remove"})
      */
     protected $routes;
 

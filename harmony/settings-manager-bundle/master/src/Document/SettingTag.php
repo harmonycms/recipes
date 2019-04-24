@@ -15,4 +15,12 @@ class SettingTag extends BaseSettingTag
      * @MongoDB\Id(strategy="auto")
      */
     protected $id;
+
+    /**
+     * @return string
+     */
+    public function getId(): string
+    {
+        return $this->id;
+    }
 }

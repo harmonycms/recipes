@@ -1,0 +1,6 @@
+doctrine:
+    orm:
+        resolve_target_entities:
+            Harmony\Bundle\SettingsManagerBundle\Model\SettingInterface: App\Entity\Setting
+            Harmony\Bundle\SettingsManagerBundle\Model\SettingDomainInterface: App\Entity\SettingDomain
+            Harmony\Bundle\SettingsManagerBundle\Model\SettingTagInterface: App\Entity\SettingTag

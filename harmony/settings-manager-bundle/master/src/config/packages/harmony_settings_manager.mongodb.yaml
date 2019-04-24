@@ -1,0 +1,5 @@
+doctrine_mongodb:
+    resolve_target_documents:
+            Harmony\Bundle\SettingsManagerBundle\Model\SettingInterface: App\Document\Setting
+            Harmony\Bundle\SettingsManagerBundle\Model\SettingDomainInterface: App\Document\SettingDomain
+            Harmony\Bundle\SettingsManagerBundle\Model\SettingTagInterface: App\Document\SettingTag

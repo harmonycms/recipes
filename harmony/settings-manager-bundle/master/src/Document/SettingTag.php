@@ -11,4 +11,8 @@ use Harmony\Bundle\SettingsManagerBundle\Model\SettingTag as BaseSettingTag;
 class SettingTag extends BaseSettingTag
 {
 
+    /**
+     * @MongoDB\Id(strategy="auto")
+     */
+    protected $id;
 }

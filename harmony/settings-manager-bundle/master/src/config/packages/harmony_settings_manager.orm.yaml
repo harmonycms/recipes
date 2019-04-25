@@ -4,3 +4,7 @@ doctrine:
             Harmony\Bundle\SettingsManagerBundle\Model\SettingInterface: App\Entity\Setting
             Harmony\Bundle\SettingsManagerBundle\Model\SettingDomainInterface: App\Entity\SettingDomain
             Harmony\Bundle\SettingsManagerBundle\Model\SettingTagInterface: App\Entity\SettingTag
+
+harmony_settings_manager:
+    dynamic:
+        enabled: true

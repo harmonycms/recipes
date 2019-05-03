@@ -1,18 +1,19 @@
 {
-  "bundles": {
-    "Harmony\\Bundle\\UserBundle\\HarmonyUserBundle": ["all"]
-  },
-  "copy-from-recipe": {
-    "config/routes/harmony_user.yaml": "%CONFIG_DIR%/routes/harmony_user.yaml"
-  },
-  "copy-from-recipe-if": {
-    "emulienfou/orm-pack": {
-      "config/packages/harmony_user.doctrine.yaml": "%CONFIG_DIR%/packages/harmony_user.yaml",
-      "src/Entity/": "%SRC_DIR%/Entity/"
+    "bundles": {
+        "Harmony\\Bundle\\UserBundle\\HarmonyUserBundle": ["all"]
     },
-    "emulienfou/mongodb-pack": {
-      "config/packages/harmony_user.doctrine_mongodb.yaml": "%CONFIG_DIR%/packages/harmony_user.yaml",
-      "src/Document/": "%SRC_DIR%/Document/"
+    "copy-from-recipe": {
+        "config/routes/harmony_user.yaml": "%CONFIG_DIR%/routes/harmony_user.yaml",
+        "config/packages/security.yaml": "%CONFIG_DIR%/packages/security.yaml"
+    },
+    "copy-from-recipe-if": {
+        "emulienfou/orm-pack": {
+            "config/packages/harmony_user.doctrine.yaml": "%CONFIG_DIR%/packages/harmony_user.yaml",
+            "src/Entity/": "%SRC_DIR%/Entity/"
+        },
+        "emulienfou/mongodb-pack": {
+            "config/packages/harmony_user.doctrine_mongodb.yaml": "%CONFIG_DIR%/packages/harmony_user.yaml",
+            "src/Document/": "%SRC_DIR%/Document/"
+        }
     }
-  }
 }

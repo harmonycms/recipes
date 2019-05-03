@@ -18,7 +18,7 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @MongoDB\ReferenceMany(targetDocument="AppBundle\Document\Group")
+     * @MongoDB\ReferenceMany(targetDocument="App\Document\Group")
      */
     protected $groups;
 

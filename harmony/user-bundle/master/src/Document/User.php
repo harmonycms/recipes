@@ -4,6 +4,7 @@ namespace App\Document;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
+use Harmony\Bundle\UserBundle\Group\GroupableUserTrait;
 use Harmony\Bundle\UserBundle\Model\User as BaseUser;
 
 /**
@@ -11,6 +12,8 @@ use Harmony\Bundle\UserBundle\Model\User as BaseUser;
  */
 class User extends BaseUser
 {
+
+    use GroupableUserTrait;
 
     /**
      * @MongoDB\Id(strategy="auto")

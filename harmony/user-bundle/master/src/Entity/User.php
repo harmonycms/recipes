@@ -29,8 +29,8 @@ class User extends BaseUser
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Group")
      * @ORM\JoinTable(name="user_user_group",
-     *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
-     *      inverseJoinColumns={@ORM\JoinColumn(name="group_id", referencedColumnName="id")}
+     *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id", onDelete="CASCADE")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="group_id", referencedColumnName="id", onDelete="CASCADE")}
      * )
      */
     protected $groups;

@@ -11,6 +11,7 @@ use Harmony\Bundle\CoreBundle\Model\Extension;
  * Class Config
  *
  * @ORM\Entity
+ * @ORM\Table(name="container_config")
  * @package App\Entity
  */
 class Config extends BaseConfig

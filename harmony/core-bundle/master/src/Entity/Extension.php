@@ -10,6 +10,7 @@ use Harmony\Bundle\CoreBundle\Model\Extension as BaseExtension;
  * Class Extension
  *
  * @ORM\Entity
+ * @ORM\Table(name="container_extension")
  * @package App\Entity
  */
 class Extension extends BaseExtension

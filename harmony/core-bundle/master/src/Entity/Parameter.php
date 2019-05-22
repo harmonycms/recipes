@@ -9,6 +9,7 @@ use Harmony\Bundle\CoreBundle\Model\Parameter as BaseParameter;
  * Class Parameter
  *
  * @ORM\Entity
+ * @ORM\Table(name="container_parameter")
  * @package App\Entity
  */
 class Parameter extends BaseParameter

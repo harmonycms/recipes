@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace App\Document;
 
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
@@ -8,9 +8,9 @@ use Harmony\Bundle\CoreBundle\Model\Extension as BaseExtension;
 
 /**
  * Class Extension
- * @MongoDB\Document(collection="container_extension")
+ * @MongoDB\Document(collection="ContainerExtension")
  *
- * @package App\Entity
+ * @package App\Document
  */
 class Extension extends BaseExtension
 {
@@ -21,8 +21,8 @@ class Extension extends BaseExtension
     protected $id;
 
     /**
-     * @MongoDB\ReferenceMany(targetDocument="Harmony\Bundle\CoreBundle\Model\Config", mappedBy="extension",
-     *     orphanRemoval=true, cascade={"persist", "remove"})
+     * @MongoDB\ReferenceMany(targetDocument="App\Document\Config", mappedBy="extension", orphanRemoval=true,
+     *     cascade={"persist", "remove"})
      * @var Collection $configs
      */
     protected $configs;

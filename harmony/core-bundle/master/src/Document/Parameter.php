@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Entity;
+namespace App\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 use Harmony\Bundle\CoreBundle\Model\Parameter as BaseParameter;
 
 /**
  * Class Parameter
- * @MongoDB\Document(collection="container_parameter")
+ * @MongoDB\Document(collection="ContainerParameter")
  *
- * @package App\Entity
+ * @package App\Document
  */
 class Parameter extends BaseParameter
 {

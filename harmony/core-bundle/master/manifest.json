@@ -1,8 +1,16 @@
 {
-  "bundles": {
-    "Harmony\\Bundle\\CoreBundle\\HarmonyCoreBundle": ["all"]
-  },
-  "copy-from-recipe": {
-    "config/": "%CONFIG_DIR%/"
-  }
+    "bundles": {
+        "Harmony\\Bundle\\CoreBundle\\HarmonyCoreBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "copy-from-recipe-if": {
+        "emulienfou/orm-pack": {
+            "src/Entity/": "%SRC_DIR%/Entity/"
+        },
+        "emulienfou/mongodb-pack": {
+            "src/Document/": "%SRC_DIR%/Document/"
+        }
+    }
 }

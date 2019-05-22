@@ -2,7 +2,9 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Harmony\Bundle\CoreBundle\Model\Config as BaseConfigAlias;
 
 /**
  * Class Config
@@ -10,7 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @package App\Entity
  */
-class Config extends \Harmony\Bundle\CoreBundle\Model\Config
+class Config extends BaseConfigAlias
 {
 
     /**
@@ -19,6 +21,12 @@ class Config extends \Harmony\Bundle\CoreBundle\Model\Config
      * @ORM\Column(type="integer")
      */
     protected $id;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Harmony\Bundle\CoreBundle\Model\Config", mappedBy="parent")
+     * @var Collection $children
+     */
+    protected $children;
 
     /**
      * @return int|string

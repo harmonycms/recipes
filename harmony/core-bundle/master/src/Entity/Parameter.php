@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Harmony\Bundle\CoreBundle\Model\Parameter as BaseParameter;
 
 /**
  * Class Parameter
@@ -10,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @package App\Entity
  */
-class Parameter extends \Harmony\Bundle\CoreBundle\Model\Parameter
+class Parameter extends BaseParameter
 {
 
     /**

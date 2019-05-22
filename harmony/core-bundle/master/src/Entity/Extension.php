@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Harmony\Bundle\CoreBundle\Model\Extension as BaseExtension;
 
 /**
  * Class Extension
@@ -11,7 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @package App\Entity
  */
-class Extension extends \Harmony\Bundle\CoreBundle\Model\Extension
+class Extension extends BaseExtension
 {
 
     /**

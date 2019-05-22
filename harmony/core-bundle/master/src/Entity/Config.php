@@ -4,7 +4,8 @@ namespace App\Entity;
 
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Harmony\Bundle\CoreBundle\Model\Config as BaseConfigAlias;
+use Harmony\Bundle\CoreBundle\Model\Config as BaseConfig;
+use Harmony\Bundle\CoreBundle\Model\Extension;
 
 /**
  * Class Config
@@ -12,7 +13,7 @@ use Harmony\Bundle\CoreBundle\Model\Config as BaseConfigAlias;
  * @ORM\Entity
  * @package App\Entity
  */
-class Config extends BaseConfigAlias
+class Config extends BaseConfig
 {
 
     /**
@@ -23,10 +24,24 @@ class Config extends BaseConfigAlias
     protected $id;
 
     /**
-     * @ORM\OneToMany(targetEntity="Harmony\Bundle\CoreBundle\Model\Config", mappedBy="parent")
+     * @ORM\OneToMany(targetEntity="App\Entity\Config", mappedBy="parent")
      * @var Collection $children
      */
     protected $children;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Config", inversedBy="children")
+     * @ORM\JoinColumn(name="parent_id", onDelete="CASCADE")
+     * @var BaseConfig $parent
+     */
+    protected $parent;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Extension", inversedBy="configs")
+     * @ORM\JoinColumn(name="extension_id", onDelete="CASCADE")
+     * @var Extension $extension
+     */
+    protected $extension;
 
     /**
      * @return int|string

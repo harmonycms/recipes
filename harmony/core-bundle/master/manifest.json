@@ -3,7 +3,7 @@
         "Harmony\\Bundle\\CoreBundle\\HarmonyCoreBundle": ["all"]
     },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
+        "config/routes/harmony.yaml": "%CONFIG_DIR%/routes/harmony.yaml"
     },
     "copy-from-recipe-if": {
         "emulienfou/orm-pack": {

@@ -1,0 +1,5 @@
+doctrine_mongodb:
+    resolve_target_documents:
+        Harmony\Bundle\CoreBundle\Model\Config: App\Document\Config
+        Harmony\Bundle\CoreBundle\Model\Extension: App\Document\Extension
+        Harmony\Bundle\CoreBundle\Model\Parameter: App\Document\Parameter

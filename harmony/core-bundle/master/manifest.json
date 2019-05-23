@@ -7,9 +7,11 @@
     },
     "copy-from-recipe-if": {
         "emulienfou/orm-pack": {
+            "config/packages/harmony.orm.yaml": "%CONFIG_DIR%/packages/harmony.yaml",
             "src/Entity/": "%SRC_DIR%/Entity/"
         },
         "emulienfou/mongodb-pack": {
+            "config/packages/harmony.mongodb.yaml": "%CONFIG_DIR%/packages/harmony.yaml",
             "src/Document/": "%SRC_DIR%/Document/"
         }
     }

@@ -1,6 +1,6 @@
 doctrine:
     orm:
         resolve_target_entities:
-            Harmony\Bundle\CoreBundle\Model\Config: App\Entity\Config
-            Harmony\Bundle\CoreBundle\Model\Extension: App\Entity\Extension
-            Harmony\Bundle\CoreBundle\Model\Parameter: App\Entity\Parameter
+            Harmony\Bundle\CoreBundle\Model\ConfigInterface: App\Entity\Config
+            Harmony\Bundle\CoreBundle\Model\ExtensionInterface: App\Entity\Extension
+            Harmony\Bundle\CoreBundle\Model\ParameterInterface: App\Entity\Parameter

@@ -24,7 +24,7 @@ class Extension extends BaseExtension
     protected $id;
 
     /**
-     * @ORM\OneToMany(targetEntity="Harmony\Bundle\CoreBundle\Model\Config", mappedBy="extension",
+     * @ORM\OneToMany(targetEntity="App\Entity\Config", mappedBy="extension",
      *     orphanRemoval=true, cascade={"persist", "remove"})
      * @var Collection $configs
      */
